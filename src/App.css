@@ -1,3 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Kenia&family=Montserrat&family=Rajdhani&family=Roboto+Slab&display=swap");
+
 .App {
   text-align: center;
+}
+
+.nav h1{
+  display: flex;
+  font-family: Kenia, sans-serif;
+  letter-spacing: 0.7rem;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.intro {
+  display: flex;
+}
+
+.logo {
+  font-size: 4rem;
+  color: gold;
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+}
+
+.search-area {
+  margin-left: auto;
+  width: 70%;
+  margin-top: 0.6rem;
+  margin-bottom: 0;
+  position: static;
+}
+
+.search-input {
+  background-color: #0000008c;
+  width: 75%;
+  height: 2.3rem;
+  border: none;
+  color: #fff;
+  border-radius: 3rem 0 0 3rem;
+  border: 0.5px solid #fff;
+  font-size: 1.3rem;
+}
+
+.search-button {
+  margin-left: auto;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+button {
+  border: none;
+  background-color: #000;
+  margin-left: auto;
+  margin-bottom: -2rem;
 }
