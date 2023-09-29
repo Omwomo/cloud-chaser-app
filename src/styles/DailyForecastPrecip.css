@@ -1,0 +1,21 @@
+.precip-forecast-section {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  background-color: #000000b2;
+  margin-top: 1rem;
+}
+
+.precip-details {
+  overflow-x: scroll;
+}
+
+.precip-header {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}

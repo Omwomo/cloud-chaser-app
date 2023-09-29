@@ -1,0 +1,89 @@
+.sun-moon-section {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  background-color: #000000b2;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.moon-sun-heading {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.icon-heading {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
+}
+
+.sun-moon {
+  display: flex;
+  border-bottom: 0.5px silod #fff;
+  border-bottom-style: dotted;
+}
+
+.sun {
+  width: 50%;
+  justify-content: center;
+}
+
+.sun-arc {
+  width: 75%;
+  height: 4.5rem;
+  margin-inline: auto;
+  border: 1px solid gold;
+  background: linear-gradient(to right, #fcce0213, #fcce0248, #fcce0204);
+  border-radius: 50rem 50rem 0rem 0rem;
+  border-style: dashed;
+  border-bottom: none;
+}
+
+.moon-arc {
+  border-style: dotted;
+  border: 1px solid #ffffff;
+  background: linear-gradient(to right, #ffffff13, #ffffff48, #ffffff04);
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.set {
+  margin-left: auto;
+}
+
+.set-icon {
+  margin-left: auto;
+  font-size: 1.5rem;
+  margin-right: -50%;
+}
+
+.moon-icons {
+  color: #fff;
+}
+
+.rise-icon {
+  margin-left: -50%;
+}
+
+.rise {
+  margin: 0;
+  color: #ffffff8c;
+}
+
+.set div {
+  margin-top: -8px;
+}
+
+.sun-icons {
+  color: gold;
+}
+
+.moon-phase {
+  display: flex;
+  justify-content: space-around;
+}

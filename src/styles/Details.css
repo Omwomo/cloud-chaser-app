@@ -1,0 +1,41 @@
+.detail {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  margin: 1rem;
+  background-color: #000000b2;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  width: 90%;
+  margin: 0 auto;
+  text-wrap: nowrap;
+}
+
+.details-heading {
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.details-grid {
+  box-sizing: border-box;
+}
+
+.grid-details {
+  padding: 0;
+}
+
+.horizontal-line {
+  width: 90%;
+  margin: 0;
+  margin-inline: auto;
+}
+
+.icons {
+  color: #fff;
+  font-size: 2rem;
+}
