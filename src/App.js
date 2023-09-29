@@ -1,25 +1,59 @@
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { SiApachecloudstack } from 'react-icons/si';
+import { setLocation, setWeatherData } from './redux/HomeSlice';
+import WeatherDisplay from './components/weatherDisplay';
+import SearchBar from './components/searchBar';
+import fetchWeatherData from './redux/weatherActions';
+import CityList from './components/cityList';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import Home from './components/Home';
-import Sp500 from './components/Sp500';
-import Nasdaq from './components/Nasdaq';
-import DowJones from './components/DowJones';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Fetch weather data based on IP address
+    const getIPAddress = async () => {
+      try {
+        const response = await fetch('https://api.ipify.org/?format=json');
+        const data = await response.json();
+
+        dispatch(setLocation(data.ip));
+
+        if (data.ip) {
+          dispatch(fetchWeatherData('auto:ip'));
+        }
+      } catch (error) {
+        console.error('Error fetching IP address:', error);
+      }
+    };
+
+    getIPAddress();
+  }, [dispatch]);
+
+  const handleSearch = (query) => {
+    if (query.trim()) {
+      dispatch(setWeatherData(null));
+      dispatch(fetchWeatherData(query));
+    }
+  };
+
   return (
     <Router>
-      <Navigation />
       <div className="App">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/sp500" element={<Sp500 />} />
-          <Route path="/nasdaq" element={<Nasdaq />} />
-          <Route path="/dow-jones" element={<DowJones />} />
-        </Routes>
+        <div className="nav">
+          <SearchBar onSearch={handleSearch} />
+          <div className="intro">
+            <SiApachecloudstack className="logo" />
+            <h1>CLOUD CHASER</h1>
+          </div>
+        </div>
+        <WeatherDisplay />
+        <CityList />
       </div>
     </Router>
   );
-}
+};
 
 export default App;
