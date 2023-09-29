@@ -1,4 +1,5 @@
 import React from 'react';
+import { WiStrongWind } from 'react-icons/wi';
 import ReactApexChart from 'react-apexcharts';
 import { useSelector } from 'react-redux';
 import { selectWeatherData } from '../redux/HomeSlice';
@@ -53,6 +54,7 @@ const Wind = () => {
   return (
     <div className="wind-section">
       <div className="wind-header">
+        <WiStrongWind className="header-icon" />
         <h3>WIND</h3>
       </div>
       <hr />

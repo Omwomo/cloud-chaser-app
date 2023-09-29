@@ -5,8 +5,14 @@
 }
 
 .hourly-forecast-heading {
-  text-align: left;
-  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 .hourly-icons {

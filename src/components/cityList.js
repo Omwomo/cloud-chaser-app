@@ -43,7 +43,7 @@ const CityList = () => {
   return (
     <div className="city-list-section">
       <div>
-        <h2>City List</h2>
+        <h2>MAJOR CITIES</h2>
         <ul className="ul">
           {cities.map((city) => (
             <li key={city.name} className="city-details">

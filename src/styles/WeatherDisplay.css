@@ -8,8 +8,7 @@
 }
 
 .summary-temperature {
-  font-size: 5rem;
-
+  font-size: 4rem;
   margin: 0;
   line-height: 5.2rem;
 }
@@ -19,7 +18,7 @@
 }
 
 .tm img {
-  margin-left: 20%;
+  margin-left: 15%;
   width: 4.8rem;
   height: 4.8rem;
 }

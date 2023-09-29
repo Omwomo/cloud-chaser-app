@@ -1,5 +1,7 @@
 import React from 'react';
-import { WiSolarEclipse } from 'react-icons/wi';
+import {
+  WiSolarEclipse, WiMoonWaningCrescent1, WiMoonWaxingCrescent5, WiHorizonAlt,
+} from 'react-icons/wi';
 import { useSelector } from 'react-redux';
 import { selectWeatherData } from '../redux/HomeSlice';
 import '../styles/SunMoon.css';
@@ -22,6 +24,7 @@ const SunMoon = () => {
   return (
     <div className="sun-moon-section">
       <div className="moon-sun-heading">
+        <WiHorizonAlt className="icon-heading" />
         <h3>SUN & MOON</h3>
       </div>
       <hr />
@@ -29,26 +32,30 @@ const SunMoon = () => {
         <div className="sun">
           <div className="sun-arc" />
           <div className="sun-details details">
-            <div className="sunrise rise">
+            <div className="sunrise">
               <WiSolarEclipse className="rise-icon sun-icons" />
               <div>{Sunrise}</div>
+              <p className="rise">sunrise</p>
             </div>
             <div className="sunset set">
               <WiSolarEclipse className="set-icon sun-icons" />
               <div>{Sunset}</div>
+              <p className="rise">sunset</p>
             </div>
           </div>
         </div>
         <div className="sun">
-          <div className="sun-arc" />
+          <div className="sun-arc moon-arc" />
           <div className="sun-details details">
-            <div className="sunrise rise">
-              <WiSolarEclipse className="rise-icon sun-icons" />
+            <div className="sunrise">
+              <WiMoonWaningCrescent1 className="rise-icon moon-icons" />
               <div>{Moonrise}</div>
+              <p className="rise">moonrise</p>
             </div>
             <div className="sunset set">
-              <WiSolarEclipse className="set-icon sun-icons" />
+              <WiMoonWaxingCrescent5 className="set-icon moon-icons" />
               <div>{Moonset}</div>
+              <p className="rise">moonset</p>
             </div>
           </div>
         </div>

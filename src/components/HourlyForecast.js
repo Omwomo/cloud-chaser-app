@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { WiTime4 } from 'react-icons/wi';
 import { useSelector } from 'react-redux';
 import ReactApexChart from 'react-apexcharts';
 import { selectWeatherData } from '../redux/HomeSlice';
@@ -89,6 +90,7 @@ const HourlyForecast = () => {
   return (
     <div className="hourly-forecast-section">
       <div className="hourly-forecast-heading">
+        <WiTime4 className="header-icon" />
         <h3>HOURLY FORECAST</h3>
       </div>
       <hr />

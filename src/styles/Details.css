@@ -16,6 +16,11 @@
   text-wrap: nowrap;
 }
 
+.details-heading {
+  text-align: start;
+  margin-left: 1rem;
+}
+
 .details-grid {
   box-sizing: border-box;
 }
@@ -27,6 +32,7 @@
 .horizontal-line {
   width: 90%;
   margin: 0;
+  margin-inline: auto;
 }
 
 .icons {

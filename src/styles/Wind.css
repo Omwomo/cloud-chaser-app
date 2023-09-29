@@ -13,15 +13,18 @@
 .wind-degree {
   width: 40%;
   padding-right: 10%;
-  border-right-style: dashed;
+  border-right-style: dash;
 }
 
 .wind-header {
-  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
 
-.wind-header h3 {
-  margin-left: 1rem;
+.header-icon {
+  font-size: 2.5rem;
+  margin-right: 0.5rem;
 }
 
 .wind-details {

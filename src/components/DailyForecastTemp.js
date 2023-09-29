@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { WiThermometer } from 'react-icons/wi';
 import { useSelector } from 'react-redux';
 import ReactApexChart from 'react-apexcharts';
 import { selectWeatherData } from '../redux/HomeSlice';
@@ -115,6 +116,7 @@ const DailyForecastTemp = () => {
   return (
     <div className="daily-forecast-section">
       <div className="daily-forecast-heading">
+        <WiThermometer className="header-icon" />
         <h3>DAILY FORECAST</h3>
       </div>
       <hr />

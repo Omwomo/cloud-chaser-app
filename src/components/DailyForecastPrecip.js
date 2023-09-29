@@ -1,4 +1,5 @@
 import React from 'react';
+import { WiUmbrella } from 'react-icons/wi';
 import { useSelector } from 'react-redux';
 import ReactApexChart from 'react-apexcharts';
 import { selectWeatherData } from '../redux/HomeSlice';
@@ -114,6 +115,7 @@ const DailyForecastPrecip = () => {
   return (
     <div className="precip-forecast-section">
       <div className="precip-header">
+        <WiUmbrella className="header-icon" />
         <h3>PROBABILITY OF PRECIPITATION</h3>
       </div>
       <hr />
