@@ -1,0 +1,10 @@
+.precip-forecast-section {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  background-color: #000000b2;
+  margin-top: 1rem;
+}
+
+.precip-details {
+  overflow-x: scroll;
+}
