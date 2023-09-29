@@ -8,6 +8,7 @@ const SearchBar = ({ onSearch }) => {
   const handleSearch = () => {
     if (query.trim()) {
       onSearch(query);
+      setQuery(''); // Clear input value after search
     }
   };
 

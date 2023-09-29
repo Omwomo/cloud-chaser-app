@@ -54,12 +54,12 @@ const CityList = () => {
                     {cityWeatherData[city.name].current.temp_c}
                     °C
                   </p>
+                  <img alt="current-weather" className="city-icon" src={cityWeatherData[city.name].current.condition.icon} />
+                  <button type="button" className="city-button" onClick={() => handleClick(city.name)}>
+                    <CgArrowUpR className="city-click" />
+                  </button>
                 </>
               )}
-              <img alt="current-weather" className="city-icon" src={cityWeatherData[city.name].current.condition.icon} />
-              <button type="button" className="city-button" onClick={() => handleClick(city.name)}>
-                <CgArrowUpR className="city-click" />
-              </button>
             </li>
           ))}
         </ul>
