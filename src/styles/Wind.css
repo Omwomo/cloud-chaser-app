@@ -1,0 +1,66 @@
+.wind-section {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  background-color: #000000b2;
+  margin-top: 1rem;
+}
+
+.apexcharts-radialbar-series patch{
+  fill: gold !important; /* Set the color of the covered area to gold */
+  border-radius: 10px; /* Add border radius */
+}
+
+.wind-degree {
+  width: 40%;
+  padding-right: 10%;
+  border-right-style: dashed;
+}
+
+.wind-header {
+  text-align: left;
+}
+
+.wind-header h3 {
+  margin-left: 1rem;
+}
+
+.wind-details {
+  display: flex;
+  align-items: center;
+  padding-left: 2%;
+}
+
+.other-wind-details {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 15%;
+}
+
+.sp {
+  margin-top: -50%;
+}
+
+.shd {
+  text-decoration: underline;
+}
+
+.s {
+  padding-left: 5%;
+  margin: 0;
+}
+
+.wind1 {
+  margin-right: 3rem;
+}
+
+.other-wind-details p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.wind-line {
+  width: 0.6rem;
+  height: 1.7rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 217, 0, 0.603);
+}
