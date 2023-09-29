@@ -8,11 +8,12 @@ import DailyForecastTemp from './DailyForecastTemp';
 import '../styles/WeatherDisplay.css';
 import DailyForecastPrecip from './DailyForecastPrecip';
 import Wind from './Wind';
+import SunMoon from './SunMoon';
 
 const WeatherDisplay = () => {
   const weatherData = useSelector(selectWeatherData);
 
-  if (!weatherData) return null;
+  if (!weatherData || !weatherData.forecast || !weatherData.forecast.forecastday) return null;
 
   const { location, current } = weatherData;
 
@@ -54,6 +55,7 @@ const WeatherDisplay = () => {
       <DailyForecastTemp />
       <DailyForecastPrecip />
       <Wind />
+      <SunMoon />
     </div>
   );
 };
