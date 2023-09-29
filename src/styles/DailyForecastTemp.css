@@ -1,0 +1,58 @@
+.daily-forecast-section {
+  border: 0.5px solid #fff;
+  border-radius: 1rem;
+  background-color: #000000b2;
+  margin-top: 1.5rem;
+}
+
+.daily-forecast-heading {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.daily-conditions {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  white-space: nowrap;
+  margin-bottom: -3rem;
+  text-align: center;
+  width: 10rem;
+}
+
+.daily-icons {
+  width: 3rem;
+  padding-right: 7.7rem;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+}
+
+.daily-icon {
+  position: relative;
+}
+
+.daily-condition {
+  position: relative;
+  height: 2rem;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.overflow-div2 {
+  width: 112.5rem;
+}
+
+.daily-forecast {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin: auto;
+  height: 60vh;
+  scrollbar-color: red;
+}
+
+.chart {
+  margin: 0;
+}
