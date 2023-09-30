@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kenia&family=Montserrat&family=Rajdhani&family=Roboto+Slab&display=swap");
 
 body {
-  background-image: url('C:\Users\Eugo\stock-pulse-pro\src\assets\bg-1.jpg');
+  background-image: url('./assets/bg-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
