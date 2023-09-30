@@ -11,10 +11,18 @@
   display: flex;
   align-items: center;
   margin-left: 1rem;
+  height: 1rem;
+}
+
+.moon-sun-heading p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 5px;
 }
 
 .icon-heading {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-right: 0.5rem;
 }
 
@@ -32,7 +40,7 @@
 .sun-arc {
   width: 75%;
   height: 4.5rem;
-  margin-inline: auto;
+  transform: translateX(15%);
   border: 1px solid gold;
   background: linear-gradient(to right, #fcce0213, #fcce0248, #fcce0204);
   border-radius: 50rem 50rem 0rem 0rem;

@@ -1,10 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
-  WiUmbrella, WiDaySunny, WiHumidity, WiCloud,
+  WiUmbrella, WiDaySunny, WiHumidity, WiCloud, WiDirectionDown, WiStars,
 } from 'react-icons/wi';
-import { CgYinyang } from 'react-icons/cg';
-import { BsEye } from 'react-icons/bs';
 import { selectWeatherData } from '../redux/HomeSlice';
 import '../styles/Details.css';
 
@@ -17,16 +15,16 @@ const Details = () => {
 
   return (
     <div className="detail">
-      <div className="details-heading details-grid">
-        <h3>DETAILS</h3>
+      <div className="details-heading">
+        <p>DETAILS</p>
       </div>
       <hr />
       <div className="details">
         <div className="pressure details-grid">
           <div className="line">
             <div className="grid-details">
-              <CgYinyang />
-              <p>Pressure</p>
+              <WiDirectionDown className="icons" />
+              <p className="detail-name">Pressure</p>
               <p>{current.pressure_mb}</p>
             </div>
           </div>
@@ -36,7 +34,7 @@ const Details = () => {
           <div className="line">
             <div className="grid-details">
               <WiHumidity className="icons" />
-              <p>Humidity</p>
+              <p className="detail-name">Humidity</p>
               <p>{current.humidity}</p>
             </div>
           </div>
@@ -45,7 +43,7 @@ const Details = () => {
         <div className="precipitation details-grid">
           <div className="grid-details">
             <WiUmbrella className="icons" />
-            <p>Precipitation</p>
+            <p className="detail-name">Precipitation</p>
             <p>{current.precip_mm}</p>
           </div>
         </div>
@@ -55,8 +53,8 @@ const Details = () => {
         <div className="visibility details-grid">
           <div className="line">
             <div className="grid-details">
-              <BsEye className="icons" />
-              <p>Visibility</p>
+              <WiStars className="icons" />
+              <p className="detail-name">Visibility</p>
               <p>{current.vis_km}</p>
             </div>
           </div>
@@ -66,7 +64,7 @@ const Details = () => {
           <div className="line">
             <div className="grid-details">
               <WiDaySunny className="icons" />
-              <p>UV Index</p>
+              <p className="detail-name">UV Index</p>
               <p>{current.uv}</p>
             </div>
           </div>
@@ -75,7 +73,7 @@ const Details = () => {
         <div className="cloud-cover details-grid">
           <div className="grid-details">
             <WiCloud className="icons" />
-            <p>Cloud Cover</p>
+            <p className="detail-name">Cloud Cover</p>
             <p>{current.cloud}</p>
           </div>
         </div>

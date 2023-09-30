@@ -49,6 +49,9 @@ const App = () => {
       </div>
       <WeatherDisplay />
       <CityList />
+      <div className="footer">
+        <p>All rights reserved @Omwomo</p>
+      </div>
     </div>
   );
 };

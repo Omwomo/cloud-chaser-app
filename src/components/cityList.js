@@ -8,11 +8,14 @@ const API_KEY = '10face67f7074b8fad7120709231709';
 
 const CityList = () => {
   const cities = useMemo(() => [
-    { name: 'New York' },
     { name: 'Siaya' },
+    { name: 'New York' },
     { name: 'Kisumu' },
+    { name: 'London' },
     { name: 'Nairobi' },
+    { name: 'Dubai' },
     { name: 'Nakuru' },
+    { name: 'Las Vegas' },
   ], []);
 
   const dispatch = useDispatch();
@@ -54,7 +57,7 @@ const CityList = () => {
                     {cityWeatherData[city.name].current.temp_c}
                     °C
                   </p>
-                  <img alt="current-weather" className="city-icon" src={cityWeatherData[city.name].current.condition.icon} />
+                  <img alt="current-weather" className="city-icons" src={cityWeatherData[city.name].current.condition.icon} />
                   <button type="button" className="city-button" onClick={() => handleClick(city.name)}>
                     <CgArrowUpR className="city-click" />
                   </button>

@@ -19,6 +19,14 @@
 .details-heading {
   text-align: start;
   margin-left: 1rem;
+  height: 1.2rem;
+}
+
+.details-heading p {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 5px;
 }
 
 .details-grid {
@@ -29,7 +37,12 @@
   padding: 0;
 }
 
+.grid-details p {
+  margin: 3px;
+}
+
 .horizontal-line {
+  display: flex;
   width: 90%;
   margin: 0;
   margin-inline: auto;
@@ -38,4 +51,9 @@
 .icons {
   color: #fff;
   font-size: 2rem;
+}
+
+.detail-name {
+  margin: 0;
+  color: #ffffff9f;
 }
