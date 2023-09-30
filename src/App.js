@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SiApachecloudstack } from 'react-icons/si';
 import { setLocation, setWeatherData } from './redux/HomeSlice';
@@ -40,19 +39,17 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <div className="nav">
-          <SearchBar onSearch={handleSearch} />
-          <div className="intro">
-            <SiApachecloudstack className="logo" />
-            <h1>CLOUD CHASER</h1>
-          </div>
+    <div className="App">
+      <div className="nav">
+        <SearchBar onSearch={handleSearch} />
+        <div className="intro">
+          <SiApachecloudstack className="logo" />
+          <h1>CLOUD CHASER</h1>
         </div>
-        <WeatherDisplay />
-        <CityList />
       </div>
-    </Router>
+      <WeatherDisplay />
+      <CityList />
+    </div>
   );
 };
 
