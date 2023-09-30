@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { CgArrowUpR } from 'react-icons/cg';
 import { useDispatch } from 'react-redux';
 import { setWeatherData } from '../redux/HomeSlice';
@@ -7,13 +7,13 @@ import '../styles/cityList.css';
 const API_KEY = '10face67f7074b8fad7120709231709';
 
 const CityList = () => {
-  const cities = [
+  const cities = useMemo(() => [
     { name: 'New York' },
     { name: 'Siaya' },
     { name: 'Kisumu' },
     { name: 'Nairobi' },
     { name: 'Nakuru' },
-  ];
+  ], []);
 
   const dispatch = useDispatch();
 
@@ -29,7 +29,7 @@ const CityList = () => {
     cities.forEach((city) => {
       fetchWeatherForCity(city.name);
     });
-  }, []);
+  }, [cities]);
 
   const handleClick = async (city) => {
     const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`);

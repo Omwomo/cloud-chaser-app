@@ -24,7 +24,7 @@ const App = () => {
           dispatch(fetchWeatherData('auto:ip'));
         }
       } catch (error) {
-        console.error('Error fetching IP address:', error);
+        throw new Error('Error fetching IP address:', error);
       }
     };
 

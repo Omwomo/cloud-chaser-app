@@ -50,7 +50,7 @@ const DailyForecastTemp = () => {
       setIconPositions(icons);
       setConditionsPosition(conditions);
     }
-  }, [weatherData]);
+  }, [weatherData, dailyLabels, forecast.forecastday]);
 
   if (!weatherData) return null;
 

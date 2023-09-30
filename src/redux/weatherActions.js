@@ -13,7 +13,7 @@ const fetchWeatherData = (query) => async (dispatch) => {
 
     dispatch(setWeatherData(data));
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    throw new Error(`Error fetching weather data: ${error}`);
   }
 };
 

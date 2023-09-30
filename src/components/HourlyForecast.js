@@ -34,7 +34,7 @@ const HourlyForecast = () => {
 
       setIconPositions(icons);
     }
-  }, [weatherData]);
+  }, [weatherData, forecast.forecastday, hourlyLabels]);
 
   if (!weatherData || !weatherData.forecast || !weatherData.forecast.forecastday) return null;
 
