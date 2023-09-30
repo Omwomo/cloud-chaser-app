@@ -21,7 +21,7 @@ const CityList = () => {
 
   useEffect(() => {
     const fetchWeatherForCity = async (city) => {
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
       const data = await response.json();
       setCityWeatherData((prevData) => ({ ...prevData, [city]: data }));
     };
@@ -32,7 +32,7 @@ const CityList = () => {
   }, [cities]);
 
   const handleClick = async (city) => {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`);
     const data = await response.json();
     dispatch(setWeatherData(data));
 
