@@ -41,11 +41,11 @@ const App = () => {
   return (
     <div className="App">
       <div className="nav">
-        <SearchBar onSearch={handleSearch} />
         <div className="intro">
           <SiApachecloudstack className="logo" />
           <h1>CLOUD CHASER</h1>
         </div>
+        <SearchBar onSearch={handleSearch} />
       </div>
       <WeatherDisplay />
       <CityList />

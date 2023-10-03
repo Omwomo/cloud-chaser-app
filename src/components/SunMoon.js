@@ -25,7 +25,7 @@ const SunMoon = () => {
     <div className="sun-moon-section">
       <div className="moon-sun-heading">
         <WiHorizonAlt className="icon-heading" />
-        <h3>SUN & MOON</h3>
+        <p>SUN & MOON</p>
       </div>
       <hr />
       <div className="sun-moon">
