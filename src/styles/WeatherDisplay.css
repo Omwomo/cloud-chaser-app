@@ -30,14 +30,14 @@
 }
 
 .summary-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-right: 1rem;
 }
 
 .location {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
 }
@@ -45,7 +45,7 @@
 .date {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: -1rem;
   padding: 0;
   line-height: 0.5rem;

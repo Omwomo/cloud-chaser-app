@@ -55,7 +55,7 @@ const Wind = () => {
     <div className="wind-section">
       <div className="wind-header">
         <WiStrongWind className="header-icon" />
-        <h3>WIND</h3>
+        <p>WIND</p>
       </div>
       <hr />
       <div className="wind-details">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { CgArrowUpR } from 'react-icons/cg';
 import { useDispatch } from 'react-redux';
 import { setWeatherData } from '../redux/HomeSlice';
@@ -7,13 +7,16 @@ import '../styles/cityList.css';
 const API_KEY = '10face67f7074b8fad7120709231709';
 
 const CityList = () => {
-  const cities = [
-    { name: 'New York' },
+  const cities = useMemo(() => [
     { name: 'Siaya' },
+    { name: 'New York' },
     { name: 'Kisumu' },
+    { name: 'London' },
     { name: 'Nairobi' },
+    { name: 'Dubai' },
     { name: 'Nakuru' },
-  ];
+    { name: 'Las Vegas' },
+  ], []);
 
   const dispatch = useDispatch();
 
@@ -21,7 +24,7 @@ const CityList = () => {
 
   useEffect(() => {
     const fetchWeatherForCity = async (city) => {
-      const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
+      const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`);
       const data = await response.json();
       setCityWeatherData((prevData) => ({ ...prevData, [city]: data }));
     };
@@ -29,10 +32,10 @@ const CityList = () => {
     cities.forEach((city) => {
       fetchWeatherForCity(city.name);
     });
-  }, []);
+  }, [cities]);
 
   const handleClick = async (city) => {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=10&aqi=no&alerts=no`);
     const data = await response.json();
     dispatch(setWeatherData(data));
 
@@ -54,7 +57,7 @@ const CityList = () => {
                     {cityWeatherData[city.name].current.temp_c}
                     °C
                   </p>
-                  <img alt="current-weather" className="city-icon" src={cityWeatherData[city.name].current.condition.icon} />
+                  <img alt="current-weather" className="city-icons" src={cityWeatherData[city.name].current.condition.icon} />
                   <button type="button" className="city-button" onClick={() => handleClick(city.name)}>
                     <CgArrowUpR className="city-click" />
                   </button>

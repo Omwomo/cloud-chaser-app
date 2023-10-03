@@ -50,7 +50,7 @@ const DailyForecastTemp = () => {
       setIconPositions(icons);
       setConditionsPosition(conditions);
     }
-  }, [weatherData]);
+  }, [weatherData, dailyLabels, forecast.forecastday]);
 
   if (!weatherData) return null;
 
@@ -68,7 +68,7 @@ const DailyForecastTemp = () => {
       max: 40,
       min: 0,
       labels: {
-        show: false,
+        show: true,
       },
     },
     dataLabels: {
@@ -96,7 +96,7 @@ const DailyForecastTemp = () => {
     grid: {
       yaxis: {
         lines: {
-          show: false,
+          show: true,
         },
       },
     },
@@ -117,7 +117,7 @@ const DailyForecastTemp = () => {
     <div className="daily-forecast-section">
       <div className="daily-forecast-heading">
         <WiThermometer className="header-icon" />
-        <h3>DAILY FORECAST</h3>
+        <p>DAILY FORECAST</p>
       </div>
       <hr />
       <div className="daily-forecast">
@@ -133,7 +133,7 @@ const DailyForecastTemp = () => {
             </div>
           </div>
           <div className="chart">
-            <ReactApexChart options={options} series={series} type="area" height={280} />
+            <ReactApexChart options={options} series={series} type="area" height={200} />
           </div>
         </div>
       </div>

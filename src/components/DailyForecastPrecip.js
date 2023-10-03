@@ -34,7 +34,7 @@ const DailyForecastPrecip = () => {
     },
     plotOptions: {
       bar: {
-        width: 120,
+        width: 50,
         borderRadius: 7,
         dataLabels: {
           position: 'top',
@@ -48,7 +48,7 @@ const DailyForecastPrecip = () => {
       formatter(val) {
         return `${val}%`;
       },
-      offsetY: -40,
+      offsetY: -30,
       style: {
         fontSize: '12px',
         colors: ['#fff'],
@@ -116,12 +116,12 @@ const DailyForecastPrecip = () => {
     <div className="precip-forecast-section">
       <div className="precip-header">
         <WiUmbrella className="header-icon" />
-        <h3>PROBABILITY OF PRECIPITATION</h3>
+        <p>PROBABILITY OF PRECIPITATION</p>
       </div>
       <hr />
       <div className="precip-details">
         <div className="precip">
-          <ReactApexChart options={options} series={series} type="bar" height={350} width={650} />
+          <ReactApexChart options={options} series={series} type="bar" height={250} width={650} />
         </div>
       </div>
     </div>

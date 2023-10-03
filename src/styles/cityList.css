@@ -10,6 +10,7 @@
   list-style: none;
   align-items: center;
   border: 0.5px solid #ffffffb7;
+  height: 2.2rem;
 }
 
 .ul {
@@ -24,11 +25,11 @@
   background-color: rgba(0, 0, 0, 0);
   width: 23%;
   display: flex;
-  align-self: center;
+  align-items: center;
 }
 
 .city-click {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   margin-bottom: 50%;
   margin-left: auto;
 }
@@ -45,7 +46,9 @@
   text-align: start;
 }
 
-.city-icon {
+.city-icons {
   margin-left: auto;
   cursor: pointer;
+  width: 2.5rem;
+  font-size: 1rem !important;
 }

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { SiApachecloudstack } from 'react-icons/si';
 import { setLocation, setWeatherData } from './redux/HomeSlice';
@@ -25,7 +24,7 @@ const App = () => {
           dispatch(fetchWeatherData('auto:ip'));
         }
       } catch (error) {
-        console.error('Error fetching IP address:', error);
+        throw new Error('Error fetching IP address:', error);
       }
     };
 
@@ -40,19 +39,20 @@ const App = () => {
   };
 
   return (
-    <Router>
-      <div className="App">
-        <div className="nav">
-          <SearchBar onSearch={handleSearch} />
-          <div className="intro">
-            <SiApachecloudstack className="logo" />
-            <h1>CLOUD CHASER</h1>
-          </div>
+    <div className="App">
+      <div className="nav">
+        <div className="intro">
+          <SiApachecloudstack className="logo" />
+          <h1>CLOUD CHASER</h1>
         </div>
-        <WeatherDisplay />
-        <CityList />
+        <SearchBar onSearch={handleSearch} />
       </div>
-    </Router>
+      <WeatherDisplay />
+      <CityList />
+      <div className="footer">
+        <p>All rights reserved @Omwomo</p>
+      </div>
+    </div>
   );
 };
 

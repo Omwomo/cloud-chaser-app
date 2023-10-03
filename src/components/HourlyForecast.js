@@ -34,7 +34,7 @@ const HourlyForecast = () => {
 
       setIconPositions(icons);
     }
-  }, [weatherData]);
+  }, [weatherData, forecast.forecastday, hourlyLabels]);
 
   if (!weatherData || !weatherData.forecast || !weatherData.forecast.forecastday) return null;
 
@@ -91,7 +91,7 @@ const HourlyForecast = () => {
     <div className="hourly-forecast-section">
       <div className="hourly-forecast-heading">
         <WiTime4 className="header-icon" />
-        <h3>HOURLY FORECAST</h3>
+        <p>HOURLY FORECAST</p>
       </div>
       <hr />
       <div className="hourly-forecast">
@@ -102,7 +102,7 @@ const HourlyForecast = () => {
             </div>
           </div>
           <div className="chart">
-            <ReactApexChart options={options} series={series} type="area" height={300} />
+            <ReactApexChart className="chart" options={options} series={series} type="area" height={220} />
           </div>
         </div>
       </div>

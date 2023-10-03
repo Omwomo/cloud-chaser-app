@@ -56,3 +56,7 @@ button {
   margin-bottom: -2rem;
   cursor: pointer;
 }
+
+.footer {
+  border-top-style: dotted;
+}
