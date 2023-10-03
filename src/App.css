@@ -13,7 +13,10 @@
 }
 
 .intro {
+  border-bottom: 1px solid #000;
   display: flex;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.8);
+  position: sticky;
 }
 
 .logo {
@@ -25,8 +28,7 @@
 
 .search-area {
   margin-left: auto;
-  width: 70%;
-  margin-top: 0.6rem;
+  width: 100%;
   margin-bottom: 0;
   position: static;
 }
